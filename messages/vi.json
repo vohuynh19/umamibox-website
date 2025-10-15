@@ -1,0 +1,239 @@
+{
+  "header": {
+    "logo": "UmamiBox",
+    "nav": {
+      "story": "Câu chuyện của chúng tôi",
+      "products": "Sản phẩm",
+      "team": "Đội ngũ",
+      "faq": "Câu hỏi thường gặp"
+    },
+    "cta": "Chọn gói",
+    "language": "Ngôn ngữ"
+  },
+  "hero": {
+    "title": "UmamiBox: Mở cửa nhận thịt bò khỏe mạnh, 100% nội địa Việt Nam với tiêu chuẩn Nhật",
+    "subtitle": "Thịt bò chất lượng cao từ những trang trại tốt nhất Việt Nam, được bảo quản và vận chuyển theo tiêu chuẩn Nhật Bản, giao tận nhà mỗi tháng.",
+    "cta": "Chọn gói của bạn"
+  },
+  "story": {
+    "title": "Câu chuyện của chúng tôi",
+    "founder": {
+      "name": "Nguyễn Minh Tuấn",
+      "role": "Nhà sáng lập UmamiBox",
+      "description": "Sau 10 năm làm việc trong ngành thực phẩm tại Nhật Bản, tôi nhận ra rằng người Việt Nam xứng đáng có được thịt bò chất lượng cao ngay tại quê nhà."
+    },
+    "problem": {
+      "title": "Vấn đề với thịt bò nhập khẩu",
+      "description": "Hầu hết thịt bò trên thị trường Việt Nam được nhập khẩu từ xa, mất đi độ tươi ngon và chất lượng dinh dưỡng trong quá trình vận chuyển dài."
+    },
+    "solution": {
+      "title": "Ưu thế của thịt bò Việt Nam",
+      "description": "Thịt bò từ những trang trại chăn nuôi theo tiêu chuẩn cao tại Việt Nam không chỉ tươi ngon hơn mà còn giữ được hương vị đặc trưng và giá trị dinh dưỡng tối ưu."
+    }
+  },
+  "preservation": {
+    "problem": {
+      "title": "Vấn đề bảo quản kém",
+      "description": "Nhiều cửa hàng thịt truyền thống không có hệ thống bảo quản đạt chuẩn, ảnh hưởng đến chất lượng và an toàn thực phẩm."
+    },
+    "solution": {
+      "title": "Quy trình tiêu chuẩn Nhật Bản",
+      "description": "UmamiBox áp dụng công nghệ đông lạnh nhanh và chuỗi lạnh liên tục theo tiêu chuẩn Nhật Bản, đảm bảo thịt bò giữ nguyên độ tươi ngon từ trang trại đến bàn ăn."
+    }
+  },
+  "boxContent": {
+    "title": "Có gì trong hộp?",
+    "description": "Mỗi hộp UmamiBox chứa 2-3kg thịt bò cao cấp được tuyển chọn kỹ lưỡng, đủ cho 8-12 bữa ăn cho gia đình 4 người.",
+    "features": [
+      "Các phần thịt đa dạng: thăn, nạm, sườn",
+      "Đóng gói riêng biệt, dễ sử dụng",
+      "Thẻ công thức nấu ăn kèm theo",
+      "Nguồn gốc xuất xứ rõ ràng"
+    ]
+  },
+  "cooking": {
+    "title": "Nấu ăn như đầu bếp chuyên nghiệp",
+    "subtitle": "Chúng tôi cung cấp công thức nấu ăn chi tiết và video hướng dẫn để bạn có thể tạo ra những món ăn ngon nhất từ thịt bò UmamiBox.",
+    "recipes": [
+      {
+        "name": "Bò nướng Teriyaki",
+        "time": "30 phút",
+        "difficulty": "Dễ"
+      },
+      {
+        "name": "Phở bò truyền thống",
+        "time": "2 giờ",
+        "difficulty": "Trung bình"
+      },
+      {
+        "name": "Bò lúc lắc",
+        "time": "20 phút",
+        "difficulty": "Dễ"
+      }
+    ]
+  },
+  "community": {
+    "title": "Cộng đồng UmamiBox",
+    "mission": "Sứ mệnh của chúng tôi là mang thịt bò chất lượng cao đến mọi gia đình Việt Nam và xây dựng cộng đồng yêu thích ẩm thực.",
+    "tiers": [
+      {
+        "name": "Gói 1 tháng",
+        "price": "899.000đ",
+        "description": "1 hộp UmamiBox giao hàng tận nhà",
+        "features": ["2-3kg thịt bò cao cấp", "Công thức nấu ăn", "Miễn phí vận chuyển"]
+      },
+      {
+        "name": "Gói 3 tháng",
+        "price": "2.499.000đ",
+        "originalPrice": "2.697.000đ",
+        "description": "3 hộp UmamiBox, tiết kiệm 7%",
+        "features": ["2-3kg thịt bò cao cấp/tháng", "Công thức nấu ăn độc quyền", "Ưu tiên hỗ trợ khách hàng"]
+      },
+      {
+        "name": "Gói 6 tháng",
+        "price": "4.799.000đ",
+        "originalPrice": "5.394.000đ",
+        "description": "6 hộp UmamiBox, tiết kiệm 11%",
+        "features": ["2-3kg thịt bò cao cấp/tháng", "Tặng kèm gia vị đặc biệt", "Video hướng dẫn nấu ăn riêng"]
+      },
+      {
+        "name": "Gói 1 năm",
+        "price": "8.999.000đ",
+        "originalPrice": "10.788.000đ",
+        "description": "12 hộp UmamiBox, tiết kiệm 17%",
+        "features": ["2-3kg thịt bò cao cấp/tháng", "Tặng bộ dao thái thịt chuyên dụng", "Tham gia lớp học nấu ăn offline"]
+      },
+      {
+        "name": "Gói Premium 1 năm + BBQ",
+        "price": "12.999.000đ",
+        "originalPrice": "15.000.000đ",
+        "description": "12 hộp UmamiBox + trải nghiệm BBQ",
+        "features": ["3-4kg thịt bò cao cấp/tháng", "Tặng bộ dụng cụ BBQ", "1 buổi BBQ tại trang trại cho 4 người"]
+      }
+    ]
+  },
+  "stretchGoals": {
+    "title": "Mục tiêu mở rộng",
+    "subtitle": "Hãy giúp chúng tôi mở khóa những phần thưởng tuyệt vời cho mọi người!",
+    "currentAmount": "350,000,000",
+    "goals": [
+      {
+        "amount": "500,000,000",
+        "title": "Mixed Box nâng cấp",
+        "description": "Thêm thịt heo và gà organic vào hộp hàng tháng",
+        "unlocked": false
+      },
+      {
+        "amount": "1,000,000,000",
+        "title": "Thịt hun khói miễn phí",
+        "description": "Tặng kèm thịt bò hun khói thủ công cho tất cả đơn hàng",
+        "unlocked": false
+      }
+    ]
+  },
+  "team": {
+    "title": "Đội ngũ của chúng tôi",
+    "members": [
+      {
+        "name": "Nguyễn Minh Tuấn",
+        "role": "CEO & Nhà sáng lập",
+        "description": "10 năm kinh nghiệm trong ngành thực phẩm tại Nhật Bản"
+      },
+      {
+        "name": "Trần Thị Hoa",
+        "role": "Giám đốc Chất lượng",
+        "description": "Chuyên gia an toàn thực phẩm với 8 năm kinh nghiệm"
+      },
+      {
+        "name": "Lê Văn Nam",
+        "role": "Giám đốc Trang trại",
+        "description": "15 năm kinh nghiệm chăn nuôi bò theo tiêu chuẩn quốc tế"
+      }
+    ]
+  },
+  "timeline": {
+    "title": "Lộ trình dự án",
+    "milestones": [
+      {
+        "date": "15/11/2025",
+        "title": "Khởi động chiến dịch",
+        "description": "Bắt đầu nhận đặt hàng từ cộng đồng"
+      },
+      {
+        "date": "15/12/2025",
+        "title": "Kết thúc chiến dịch",
+        "description": "Hoàn thành giai đoạn gọi vốn cộng đồng"
+      },
+      {
+        "date": "01/2026",
+        "title": "Giao hàng dự kiến",
+        "description": "Bắt đầu giao hộp UmamiBox đầu tiên"
+      }
+    ]
+  },
+  "faq": {
+    "title": "Câu hỏi thường gặp",
+    "items": [
+      {
+        "question": "Thịt bò có được bảo quản như thế nào?",
+        "answer": "Tất cả thịt bò được đông lạnh nhanh ngay sau khi giết mổ và duy trì chuỗi lạnh liên tục đến tay khách hàng. Chúng tôi sử dụng hộp xốp cách nhiệt và đá khô để đảm bảo thịt luôn ở nhiệt độ tối ưu."
+      },
+      {
+        "question": "Tôi có thể hủy đăng ký hàng tháng không?",
+        "answer": "Có, bạn có thể hủy đăng ký bất kỳ lúc nào sau khi nhận được hộp đầu tiên. Chúng tôi không ràng buộc khách hàng với hợp đồng dài hạn."
+      },
+      {
+        "question": "Thịt bò có nguồn gốc từ đâu?",
+        "answer": "Tất cả thịt bò đều từ các trang trại đối tác tại Việt Nam, chủ yếu ở vùng Tây Nguyên và miền Bắc. Chúng tôi kiểm tra nghiêm ngặt quy trình chăn nuôi và chỉ hợp tác với những trang trại đạt tiêu chuẩn cao nhất."
+      },
+      {
+        "question": "Khu vực nào được giao hàng?",
+        "answer": "Hiện tại chúng tôi giao hàng tại TP.HCM, Hà Nội và các tỉnh lân cận. Chúng tôi đang mở rộng phạm vi giao hàng và sẽ cập nhật sớm nhất có thể."
+      },
+      {
+        "question": "Tôi có thể chọn loại thịt trong hộp không?",
+        "answer": "Mỗi hộp được tuyển chọn bởi đội ngũ chuyên gia để đảm bảo sự đa dạng và chất lượng. Tuy nhiên, nếu bạn có yêu cầu đặc biệt hoặc dị ứng, vui lòng liên hệ với chúng tôi."
+      }
+    ]
+  },
+  "footer": {
+    "description": "UmamiBox mang đến thịt bò Việt Nam cao cấp với tiêu chuẩn Nhật Bản trực tiếp đến tận nhà bạn mỗi tháng.",
+    "newsletter": {
+      "title": "Cập nhật tin tức",
+      "placeholder": "Nhập email của bạn",
+      "subscribe": "Đăng ký"
+    },
+    "quickLinks": {
+      "title": "Liên kết nhanh",
+      "links": [
+        { "text": "Câu hỏi thường gặp", "href": "#faq" },
+        { "text": "Liên hệ", "href": "#contact" },
+        { "text": "Về chúng tôi", "href": "#story" }
+      ]
+    },
+    "contact": {
+      "title": "Liên hệ với chúng tôi",
+      "email": "hello@umamibox.vn",
+      "address": "Thành phố Hồ Chí Minh, Việt Nam"
+    },
+    "language": "Ngôn ngữ",
+    "copyright": "© 2025 UmamiBox. Tất cả quyền được bảo lưu.",
+    "legal": {
+      "privacy": "Chính sách bảo mật",
+      "terms": "Điều khoản dịch vụ",
+      "cookies": "Chính sách Cookie"
+    },
+    "social": {
+      "title": "Theo dõi chúng tôi",
+      "facebook": "https://facebook.com/umamibox",
+      "instagram": "https://instagram.com/umamibox"
+    }
+  },
+  "common": {
+    "readMore": "Đọc thêm",
+    "learnMore": "Tìm hiểu thêm",
+    "getStarted": "Bắt đầu ngay",
+    "comingSoon": "Sắp ra mắt",
+    "loading": "Đang tải..."
+  }
+}

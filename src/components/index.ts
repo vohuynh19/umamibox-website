@@ -1,0 +1,12 @@
+export { default as Header } from "./Header";
+export { default as HeroSection } from "./HeroSection";
+export { default as StorySection } from "./StorySection";
+export { default as PreservationSection } from "./PreservationSection";
+export { default as BoxContentSection } from "./BoxContentSection";
+export { default as CookingSection } from "./CookingSection";
+export { default as CommunitySection } from "./CommunitySection";
+export { default as StretchGoalsSection } from "./StretchGoalsSection";
+export { default as TeamSection } from "./TeamSection";
+export { default as TimelineSection } from "./TimelineSection";
+export { default as FAQSection } from "./FAQSection";
+export { default as Footer } from "./Footer";
