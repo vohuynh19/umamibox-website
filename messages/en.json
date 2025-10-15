@@ -1,313 +1,355 @@
 {
-  "campaign": {
-    "pledged": "$45,230",
-    "goal": "$25,000",
-    "backers": "287",
-    "daysLeft": "23",
-    "percentFunded": 181,
-    "status": "Funded",
-    "labels": {
-      "pledged": "pledged of",
-      "goal": "goal",
-      "backers": "backers",
-      "daysLeft": "days to go"
-    }
-  },
-  "header": {
-    "logo": "UmamiBox",
-    "nav": {
-      "story": "Story",
-      "rewards": "Rewards",
-      "faq": "FAQ"
-    },
-    "cta": "Back this project",
-    "language": "Language"
-  },
-  "hero": {
-    "title": "UmamiBox: Open Your Door to Healthy, 100% Vietnamese Beef with Japanese Standards",
-    "subtitle": "Premium quality beef from Vietnam's finest farms, preserved and delivered using Japanese standards, straight to your door every month.",
-    "cta": "Choose Your Package"
-  },
-  "rewards": {
-    "title": "Choose Your Reward",
-    "subtitle": "Select the perfect UmamiBox package for you. All rewards include premium Vietnamese beef with Japanese preservation standards.",
-    "tiers": [
-      {
-        "id": "early-bird",
-        "title": "Early Bird Special",
-        "price": "$89",
-        "originalPrice": "$120",
-        "description": "Perfect for trying UmamiBox for the first time. Get premium Vietnamese beef delivered monthly with our signature preservation method.",
-        "includes": [
-          "1 month UmamiBox subscription",
-          "2kg premium Vietnamese beef cuts",
-          "Japanese-standard preservation packaging",
-          "Cooking guide and recipes",
-          "Free shipping within Vietnam"
-        ],
-        "delivery": "March 2024",
-        "backers": 89,
-        "limited": true,
-        "remaining": 11,
-        "popular": false
-      },
-      {
-        "id": "monthly-box",
-        "title": "Monthly UmamiBox",
-        "price": "$120",
-        "description": "Our most popular option! Get a monthly delivery of premium Vietnamese beef with Japanese preservation standards.",
-        "includes": [
-          "1 month UmamiBox subscription",
-          "2.5kg premium Vietnamese beef cuts",
-          "Japanese-standard preservation packaging",
-          "Detailed cooking guide and recipes",
-          "Free shipping within Vietnam",
-          "Access to exclusive cooking videos"
-        ],
-        "delivery": "March 2024",
-        "backers": 156,
-        "popular": true
-      },
-      {
-        "id": "quarterly-box",
-        "title": "Quarterly Premium Box",
-        "price": "$320",
-        "originalPrice": "$360",
-        "description": "Save more with our 3-month package. Perfect for families who want consistent access to premium Vietnamese beef.",
-        "includes": [
-          "3 month UmamiBox subscription",
-          "2.5kg premium Vietnamese beef cuts per month",
-          "Japanese-standard preservation packaging",
-          "Comprehensive cooking guide and recipe book",
-          "Free shipping within Vietnam",
-          "Access to exclusive cooking videos",
-          "Priority customer support"
-        ],
-        "delivery": "March 2024",
-        "backers": 42,
-        "popular": false
-      }
-    ]
-  },
-  "story": {
-    "title": "Our Story",
-    "founder": {
-      "name": "Nguyen Minh Tuan",
-      "role": "UmamiBox Founder",
-      "description": "After 10 years working in the food industry in Japan, I realized that Vietnamese people deserve access to high-quality beef right here at home."
-    },
-    "problem": {
-      "title": "The Problem with Imported Beef",
-      "description": "Most beef in the Vietnamese market is imported from far away, losing freshness and nutritional quality during long transportation."
-    },
-    "solution": {
-      "title": "Vietnamese Beef Advantages",
-      "description": "Beef from high-standard farms in Vietnam is not only fresher but also retains its distinctive flavor and optimal nutritional value."
-    }
-  },
-  "preservation": {
-    "problem": {
-      "title": "Poor Storage Issues",
-      "description": "Many traditional meat shops lack proper storage systems, affecting food quality and safety."
-    },
-    "solution": {
-      "title": "Japanese Standard Process",
-      "description": "UmamiBox applies rapid freezing technology and continuous cold chain following Japanese standards, ensuring beef maintains freshness from farm to table."
-    }
-  },
-  "boxContent": {
-    "title": "What's in the Box?",
-    "description": "Each UmamiBox contains 2-3kg of carefully selected premium beef, enough for 8-12 meals for a family of 4.",
-    "features": [
-      "Diverse cuts: tenderloin, chuck, ribs",
-      "Individually packaged for easy use",
-      "Recipe cards included",
-      "Clear origin traceability"
-    ]
-  },
-  "cooking": {
-    "title": "Cook Like a Professional Chef",
-    "subtitle": "We provide detailed recipes and instructional videos so you can create the most delicious dishes from UmamiBox beef.",
-    "recipes": [
-      {
-        "name": "Teriyaki Grilled Beef",
-        "time": "30 minutes",
-        "difficulty": "Easy"
-      },
-      {
-        "name": "Traditional Pho Bo",
-        "time": "2 hours",
-        "difficulty": "Medium"
-      },
-      {
-        "name": "Shaking Beef",
-        "time": "20 minutes",
-        "difficulty": "Easy"
-      }
-    ]
-  },
-  "community": {
-    "title": "UmamiBox Community",
-    "mission": "Our mission is to bring high-quality beef to every Vietnamese family and build a community of food enthusiasts.",
-    "tiers": [
-      {
-        "name": "1 Month Package",
-        "price": "899,000đ",
-        "description": "1 UmamiBox delivered to your door",
-        "features": ["2-3kg premium beef", "Recipe cards", "Free shipping"]
-      },
-      {
-        "name": "3 Month Package",
-        "price": "2,499,000đ",
-        "originalPrice": "2,697,000đ",
-        "description": "3 UmamiBoxes, save 7%",
-        "features": ["2-3kg premium beef/month", "Exclusive recipes", "Priority customer support"]
-      },
-      {
-        "name": "6 Month Package",
-        "price": "4,799,000đ",
-        "originalPrice": "5,394,000đ",
-        "description": "6 UmamiBoxes, save 11%",
-        "features": ["2-3kg premium beef/month", "Special spices included", "Private cooking video tutorials"]
-      },
-      {
-        "name": "1 Year Package",
-        "price": "8,999,000đ",
-        "originalPrice": "10,788,000đ",
-        "description": "12 UmamiBoxes, save 17%",
-        "features": ["2-3kg premium beef/month", "Professional knife set included", "Offline cooking class access"]
-      },
-      {
-        "name": "Premium 1 Year + BBQ",
-        "price": "12,999,000đ",
-        "originalPrice": "15,000,000đ",
-        "description": "12 UmamiBoxes + BBQ experience",
-        "features": ["3-4kg premium beef/month", "BBQ equipment set included", "1 farm BBQ experience for 4 people"]
-      }
-    ]
-  },
-  "stretchGoals": {
-    "title": "Stretch Goals",
-    "subtitle": "Help us unlock amazing rewards for everyone!",
-    "currentAmount": "350,000,000",
-    "goals": [
-      {
-        "amount": "500,000,000",
-        "title": "Mixed Box Upgrade",
-        "description": "Add organic pork and chicken to monthly boxes",
-        "unlocked": false
-      },
-      {
-        "amount": "1,000,000,000",
-        "title": "Free Smoked Meat",
-        "description": "Include handcrafted smoked beef with all orders",
-        "unlocked": false
-      }
-    ]
-  },
-  "team": {
-    "title": "Our Team",
-    "members": [
-      {
-        "name": "Nguyen Minh Tuan",
-        "role": "CEO & Founder",
-        "description": "10 years of experience in the food industry in Japan"
-      },
-      {
-        "name": "Tran Thi Hoa",
-        "role": "Quality Director",
-        "description": "Food safety expert with 8 years of experience"
-      },
-      {
-        "name": "Le Van Nam",
-        "role": "Farm Director",
-        "description": "15 years of experience in international standard cattle farming"
-      }
-    ]
-  },
-  "timeline": {
-    "title": "Project Timeline",
-    "milestones": [
-      {
-        "date": "Nov 15, 2025",
-        "title": "Campaign Launch",
-        "description": "Start accepting orders from the community"
-      },
-      {
-        "date": "Dec 15, 2025",
-        "title": "Campaign End",
-        "description": "Complete crowdfunding phase"
-      },
-      {
-        "date": "Jan 2026",
-        "title": "Estimated Delivery",
-        "description": "Begin delivering first UmamiBoxes"
-      }
-    ]
-  },
-  "faq": {
-    "title": "Frequently Asked Questions",
-    "items": [
-      {
-        "question": "How is the beef preserved?",
-        "answer": "All beef is flash-frozen immediately after slaughter and maintains a continuous cold chain to customers. We use insulated foam boxes and dry ice to ensure meat stays at optimal temperature."
-      },
-      {
-        "question": "Can I cancel my monthly subscription?",
-        "answer": "Yes, you can cancel your subscription at any time after receiving your first box. We don't bind customers to long-term contracts."
-      },
-      {
-        "question": "Where does the beef come from?",
-        "answer": "All beef comes from partner farms in Vietnam, mainly in the Central Highlands and Northern regions. We strictly inspect farming processes and only partner with farms meeting the highest standards."
-      },
-      {
-        "question": "Which areas do you deliver to?",
-        "answer": "Currently we deliver to Ho Chi Minh City, Hanoi and surrounding provinces. We are expanding our delivery range and will update as soon as possible."
-      },
-      {
-        "question": "Can I choose the meat types in my box?",
-        "answer": "Each box is curated by our expert team to ensure variety and quality. However, if you have special requests or allergies, please contact us."
-      }
-    ]
-  },
-  "footer": {
-    "description": "UmamiBox brings premium Vietnamese beef with Japanese standards directly to your door every month.",
-    "newsletter": {
-      "title": "Stay Updated",
-      "placeholder": "Enter your email",
-      "subscribe": "Subscribe"
-    },
-    "quickLinks": {
-      "title": "Quick Links",
-      "links": [
-        { "text": "FAQ", "href": "#faq" },
-        { "text": "Contact", "href": "#contact" },
-        { "text": "About Us", "href": "#story" }
-      ]
-    },
-    "contact": {
-      "title": "Contact Us",
-      "email": "hello@umamibox.vn",
-      "address": "Ho Chi Minh City, Vietnam"
-    },
-    "language": "Language",
-    "copyright": "© 2025 UmamiBox. All rights reserved.",
-    "legal": {
-      "privacy": "Privacy Policy",
-      "terms": "Terms of Service",
-      "cookies": "Cookie Policy"
-    },
-    "social": {
-      "title": "Follow Us",
-      "facebook": "https://facebook.com/umamibox",
-      "instagram": "https://instagram.com/umamibox"
-    }
-  },
-  "common": {
-    "readMore": "Read More",
-    "learnMore": "Learn More",
-    "getStarted": "Get Started",
-    "comingSoon": "Coming Soon",
-    "loading": "Loading..."
-  }
+    "campaign":  {
+                     "pledged":  "$45,230",
+                     "goal":  "$25,000",
+                     "backers":  "287",
+                     "daysLeft":  "23",
+                     "percentFunded":  181,
+                     "status":  "Funded",
+                     "labels":  {
+                                    "pledged":  "pledged of",
+                                    "goal":  "goal",
+                                    "backers":  "backers",
+                                    "daysLeft":  "days to go"
+                                },
+                     "meta":  {
+                                  "badge":  "Project We Love",
+                                  "location":  "Ho Chi Minh City, Vietnam",
+                                  "category":  "Food",
+                                  "lastUpdatedLabel":  "Last updated",
+                                  "lastUpdatedValue":  "May 15, 2025",
+                                  "fundingPeriod":  {
+                                                        "title":  "Funding period",
+                                                        "start":  "Sep 8, 2025",
+                                                        "end":  "Oct 8, 2025",
+                                                        "duration":  "30 days"
+                                                    }
+                              }
+                 },
+    "header":  {
+                   "logo":  "UmamiBox",
+                   "nav":  {
+                               "story":  "Story",
+                               "rewards":  "Rewards",
+                               "faq":  "FAQ"
+                           },
+                   "cta":  "Back this project",
+                   "language":  "Language"
+               },
+    "hero":  {
+                 "title":  "UmamiBox: Open Your Door to Healthy, 100% Vietnamese Beef with Japanese Standards",
+                 "subtitle":  "Premium quality beef from Vietnam\u0027s finest farms, preserved and delivered using Japanese standards, straight to your door every month.",
+                 "cta":  "Choose Your Package"
+             },
+    "rewards":  {
+                    "title":  "Choose Your Reward",
+                    "subtitle":  "Select the perfect UmamiBox package for you. All rewards include premium Vietnamese beef with Japanese preservation standards.",
+                    "tiers":  [
+                                  {
+                                      "id":  "early-bird",
+                                      "title":  "Early Bird Special",
+                                      "price":  "$89",
+                                      "originalPrice":  "$120",
+                                      "description":  "Perfect for trying UmamiBox for the first time. Get premium Vietnamese beef delivered monthly with our signature preservation method.",
+                                      "includes":  [
+                                                       "1 month UmamiBox subscription",
+                                                       "2kg premium Vietnamese beef cuts",
+                                                       "Japanese-standard preservation packaging",
+                                                       "Cooking guide and recipes",
+                                                       "Free shipping within Vietnam"
+                                                   ],
+                                      "delivery":  "March 2024",
+                                      "backers":  89,
+                                      "limited":  true,
+                                      "remaining":  11,
+                                      "popular":  false
+                                  },
+                                  {
+                                      "id":  "monthly-box",
+                                      "title":  "Monthly UmamiBox",
+                                      "price":  "$120",
+                                      "description":  "Our most popular option! Get a monthly delivery of premium Vietnamese beef with Japanese preservation standards.",
+                                      "includes":  [
+                                                       "1 month UmamiBox subscription",
+                                                       "2.5kg premium Vietnamese beef cuts",
+                                                       "Japanese-standard preservation packaging",
+                                                       "Detailed cooking guide and recipes",
+                                                       "Free shipping within Vietnam",
+                                                       "Access to exclusive cooking videos"
+                                                   ],
+                                      "delivery":  "March 2024",
+                                      "backers":  156,
+                                      "popular":  true
+                                  },
+                                  {
+                                      "id":  "quarterly-box",
+                                      "title":  "Quarterly Premium Box",
+                                      "price":  "$320",
+                                      "originalPrice":  "$360",
+                                      "description":  "Save more with our 3-month package. Perfect for families who want consistent access to premium Vietnamese beef.",
+                                      "includes":  [
+                                                       "3 month UmamiBox subscription",
+                                                       "2.5kg premium Vietnamese beef cuts per month",
+                                                       "Japanese-standard preservation packaging",
+                                                       "Comprehensive cooking guide and recipe book",
+                                                       "Free shipping within Vietnam",
+                                                       "Access to exclusive cooking videos",
+                                                       "Priority customer support"
+                                                   ],
+                                      "delivery":  "March 2024",
+                                      "backers":  42,
+                                      "popular":  false
+                                  }
+                              ]
+                },
+    "story":  {
+                  "title":  "Our Story",
+                  "founder":  {
+                                  "name":  "Nguyen Minh Tuan",
+                                  "role":  "UmamiBox Founder",
+                                  "description":  "After 10 years working in the food industry in Japan, I realized that Vietnamese people deserve access to high-quality beef right here at home."
+                              },
+                  "problem":  {
+                                  "title":  "The Problem with Imported Beef",
+                                  "description":  "Most beef in the Vietnamese market is imported from far away, losing freshness and nutritional quality during long transportation."
+                              },
+                  "solution":  {
+                                   "title":  "Vietnamese Beef Advantages",
+                                   "description":  "Beef from high-standard farms in Vietnam is not only fresher but also retains its distinctive flavor and optimal nutritional value."
+                               }
+              },
+    "preservation":  {
+                         "problem":  {
+                                         "title":  "Poor Storage Issues",
+                                         "description":  "Many traditional meat shops lack proper storage systems, affecting food quality and safety."
+                                     },
+                         "solution":  {
+                                          "title":  "Japanese Standard Process",
+                                          "description":  "UmamiBox applies rapid freezing technology and continuous cold chain following Japanese standards, ensuring beef maintains freshness from farm to table."
+                                      }
+                     },
+    "boxContent":  {
+                       "title":  "What\u0027s in the Box?",
+                       "description":  "Each UmamiBox contains 2-3kg of carefully selected premium beef, enough for 8-12 meals for a family of 4.",
+                       "features":  [
+                                        "Diverse cuts: tenderloin, chuck, ribs",
+                                        "Individually packaged for easy use",
+                                        "Recipe cards included",
+                                        "Clear origin traceability"
+                                    ]
+                   },
+    "cooking":  {
+                    "title":  "Cook Like a Professional Chef",
+                    "subtitle":  "We provide detailed recipes and instructional videos so you can create the most delicious dishes from UmamiBox beef.",
+                    "recipes":  [
+                                    {
+                                        "name":  "Teriyaki Grilled Beef",
+                                        "time":  "30 minutes",
+                                        "difficulty":  "Easy"
+                                    },
+                                    {
+                                        "name":  "Traditional Pho Bo",
+                                        "time":  "2 hours",
+                                        "difficulty":  "Medium"
+                                    },
+                                    {
+                                        "name":  "Shaking Beef",
+                                        "time":  "20 minutes",
+                                        "difficulty":  "Easy"
+                                    }
+                                ]
+                },
+    "community":  {
+                      "title":  "UmamiBox Community",
+                      "mission":  "Our mission is to bring high-quality beef to every Vietnamese family and build a community of food enthusiasts.",
+                      "tiers":  [
+                                    {
+                                        "name":  "1 Month Package",
+                                        "price":  "899,000Ä‘",
+                                        "description":  "1 UmamiBox delivered to your door",
+                                        "features":  [
+                                                         "2-3kg premium beef",
+                                                         "Recipe cards",
+                                                         "Free shipping"
+                                                     ]
+                                    },
+                                    {
+                                        "name":  "3 Month Package",
+                                        "price":  "2,499,000Ä‘",
+                                        "originalPrice":  "2,697,000Ä‘",
+                                        "description":  "3 UmamiBoxes, save 7%",
+                                        "features":  [
+                                                         "2-3kg premium beef/month",
+                                                         "Exclusive recipes",
+                                                         "Priority customer support"
+                                                     ]
+                                    },
+                                    {
+                                        "name":  "6 Month Package",
+                                        "price":  "4,799,000Ä‘",
+                                        "originalPrice":  "5,394,000Ä‘",
+                                        "description":  "6 UmamiBoxes, save 11%",
+                                        "features":  [
+                                                         "2-3kg premium beef/month",
+                                                         "Special spices included",
+                                                         "Private cooking video tutorials"
+                                                     ]
+                                    },
+                                    {
+                                        "name":  "1 Year Package",
+                                        "price":  "8,999,000Ä‘",
+                                        "originalPrice":  "10,788,000Ä‘",
+                                        "description":  "12 UmamiBoxes, save 17%",
+                                        "features":  [
+                                                         "2-3kg premium beef/month",
+                                                         "Professional knife set included",
+                                                         "Offline cooking class access"
+                                                     ]
+                                    },
+                                    {
+                                        "name":  "Premium 1 Year + BBQ",
+                                        "price":  "12,999,000Ä‘",
+                                        "originalPrice":  "15,000,000Ä‘",
+                                        "description":  "12 UmamiBoxes + BBQ experience",
+                                        "features":  [
+                                                         "3-4kg premium beef/month",
+                                                         "BBQ equipment set included",
+                                                         "1 farm BBQ experience for 4 people"
+                                                     ]
+                                    }
+                                ]
+                  },
+    "stretchGoals":  {
+                         "title":  "Stretch Goals",
+                         "subtitle":  "Help us unlock amazing rewards for everyone!",
+                         "currentAmount":  "350,000,000",
+                         "goals":  [
+                                       {
+                                           "amount":  "500,000,000",
+                                           "title":  "Mixed Box Upgrade",
+                                           "description":  "Add organic pork and chicken to monthly boxes",
+                                           "unlocked":  false
+                                       },
+                                       {
+                                           "amount":  "1,000,000,000",
+                                           "title":  "Free Smoked Meat",
+                                           "description":  "Include handcrafted smoked beef with all orders",
+                                           "unlocked":  false
+                                       }
+                                   ]
+                     },
+    "team":  {
+                 "title":  "Our Team",
+                 "members":  [
+                                 {
+                                     "name":  "Nguyen Minh Tuan",
+                                     "role":  "CEO \u0026 Founder",
+                                     "description":  "10 years of experience in the food industry in Japan"
+                                 },
+                                 {
+                                     "name":  "Tran Thi Hoa",
+                                     "role":  "Quality Director",
+                                     "description":  "Food safety expert with 8 years of experience"
+                                 },
+                                 {
+                                     "name":  "Le Van Nam",
+                                     "role":  "Farm Director",
+                                     "description":  "15 years of experience in international standard cattle farming"
+                                 }
+                             ]
+             },
+    "timeline":  {
+                     "title":  "Project Timeline",
+                     "milestones":  [
+                                        {
+                                            "date":  "Nov 15, 2025",
+                                            "title":  "Campaign Launch",
+                                            "description":  "Start accepting orders from the community"
+                                        },
+                                        {
+                                            "date":  "Dec 15, 2025",
+                                            "title":  "Campaign End",
+                                            "description":  "Complete crowdfunding phase"
+                                        },
+                                        {
+                                            "date":  "Jan 2026",
+                                            "title":  "Estimated Delivery",
+                                            "description":  "Begin delivering first UmamiBoxes"
+                                        }
+                                    ]
+                 },
+    "faq":  {
+                "title":  "Frequently Asked Questions",
+                "items":  [
+                              {
+                                  "question":  "How is the beef preserved?",
+                                  "answer":  "All beef is flash-frozen immediately after slaughter and maintains a continuous cold chain to customers. We use insulated foam boxes and dry ice to ensure meat stays at optimal temperature."
+                              },
+                              {
+                                  "question":  "Can I cancel my monthly subscription?",
+                                  "answer":  "Yes, you can cancel your subscription at any time after receiving your first box. We don\u0027t bind customers to long-term contracts."
+                              },
+                              {
+                                  "question":  "Where does the beef come from?",
+                                  "answer":  "All beef comes from partner farms in Vietnam, mainly in the Central Highlands and Northern regions. We strictly inspect farming processes and only partner with farms meeting the highest standards."
+                              },
+                              {
+                                  "question":  "Which areas do you deliver to?",
+                                  "answer":  "Currently we deliver to Ho Chi Minh City, Hanoi and surrounding provinces. We are expanding our delivery range and will update as soon as possible."
+                              },
+                              {
+                                  "question":  "Can I choose the meat types in my box?",
+                                  "answer":  "Each box is curated by our expert team to ensure variety and quality. However, if you have special requests or allergies, please contact us."
+                              }
+                          ]
+            },
+    "footer":  {
+                   "description":  "UmamiBox brings premium Vietnamese beef with Japanese standards directly to your door every month.",
+                   "newsletter":  {
+                                      "title":  "Stay Updated",
+                                      "placeholder":  "Enter your email",
+                                      "subscribe":  "Subscribe"
+                                  },
+                   "quickLinks":  {
+                                      "title":  "Quick Links",
+                                      "links":  [
+                                                    {
+                                                        "text":  "FAQ",
+                                                        "href":  "#faq"
+                                                    },
+                                                    {
+                                                        "text":  "Contact",
+                                                        "href":  "#contact"
+                                                    },
+                                                    {
+                                                        "text":  "About Us",
+                                                        "href":  "#story"
+                                                    }
+                                                ]
+                                  },
+                   "contact":  {
+                                   "title":  "Contact Us",
+                                   "email":  "hello@umamibox.vn",
+                                   "address":  "Ho Chi Minh City, Vietnam"
+                               },
+                   "language":  "Language",
+                   "copyright":  "Â© 2025 UmamiBox. All rights reserved.",
+                   "legal":  {
+                                 "privacy":  "Privacy Policy",
+                                 "terms":  "Terms of Service",
+                                 "cookies":  "Cookie Policy"
+                             },
+                   "social":  {
+                                  "title":  "Follow Us",
+                                  "facebook":  "https://facebook.com/umamibox",
+                                  "instagram":  "https://instagram.com/umamibox"
+                              }
+               },
+    "common":  {
+                   "readMore":  "Read More",
+                   "learnMore":  "Learn More",
+                   "getStarted":  "Get Started",
+                   "comingSoon":  "Coming Soon",
+                   "loading":  "Loading..."
+               }
 }

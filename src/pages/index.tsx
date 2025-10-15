@@ -5,8 +5,10 @@ import { useState, useEffect } from "react";
 import {
   Header,
   HeroSection,
-  StorySection,
+  ProjectNav,
+  RewardsSidebar,
   RewardsSection,
+  StorySection,
   FAQSection,
   Footer,
 } from "@/components";
@@ -61,8 +63,8 @@ export default function Home() {
         onLanguageChange={handleLanguageChange}
       />
 
-      <main className="min-h-screen">
-        <div id="hero">
+      <main className="min-h-screen bg-gray-50">
+        <section id="hero">
           <HeroSection
             messages={{
               title: t.raw("hero.title"),
@@ -72,23 +74,44 @@ export default function Home() {
             campaign={t.raw("campaign")}
             scrollToRewards={scrollToRewards}
           />
+        </section>
+
+        <ProjectNav
+          items={[
+            { label: t("header.nav.story"), href: "story" },
+            { label: t("header.nav.rewards"), href: "rewards" },
+            { label: t("header.nav.faq"), href: "faq" },
+          ]}
+        />
+
+        <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+          <div className="grid gap-12 lg:grid-cols-12">
+            <div className="space-y-16 lg:col-span-8">
+              <section id="story">
+                <StorySection messages={t.raw("story")} />
+              </section>
+
+              <section id="faq">
+                <FAQSection messages={t.raw("faq")} />
+              </section>
+            </div>
+
+            <div className="lg:col-span-4">
+              <RewardsSidebar
+                rewards={t.raw("rewards.tiers")}
+                onSelectReward={scrollToRewards}
+              />
+            </div>
+          </div>
         </div>
 
-        <div id="story">
-          <StorySection messages={t.raw("story")} />
-        </div>
-
-        <div id="rewards">
+        <section id="rewards">
           <RewardsSection
             title={t.raw("rewards.title")}
             subtitle={t.raw("rewards.subtitle")}
             rewards={t.raw("rewards.tiers")}
           />
-        </div>
-
-        <div id="faq">
-          <FAQSection messages={t.raw("faq")} />
-        </div>
+        </section>
 
         <Footer
           messages={t.raw("footer")}

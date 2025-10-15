@@ -1,6 +1,8 @@
 export { default as Header } from "./Header";
-export { default as RewardsSection } from "./RewardsSection";
 export { default as HeroSection } from "./HeroSection";
+export { default as ProjectNav } from "./ProjectNav";
+export { default as RewardsSidebar } from "./RewardsSidebar";
+export { default as RewardsSection } from "./RewardsSection";
 export { default as StorySection } from "./StorySection";
 export { default as PreservationSection } from "./PreservationSection";
 export { default as BoxContentSection } from "./BoxContentSection";

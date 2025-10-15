@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-interface Reward {
+export interface Reward {
   id: string;
   title: string;
   price: string;
