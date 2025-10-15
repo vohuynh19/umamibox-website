@@ -6,13 +6,7 @@ import {
   Header,
   HeroSection,
   StorySection,
-  PreservationSection,
-  BoxContentSection,
-  CookingSection,
-  CommunitySection,
-  StretchGoalsSection,
-  TeamSection,
-  TimelineSection,
+  RewardsSection,
   FAQSection,
   Footer,
 } from "@/components";
@@ -31,7 +25,7 @@ export default function Home() {
   };
 
   const scrollToRewards = () => {
-    const rewardsSection = document.getElementById("stretch-goals");
+    const rewardsSection = document.getElementById("rewards");
     if (rewardsSection) {
       rewardsSection.scrollIntoView({ behavior: "smooth" });
     }
@@ -75,6 +69,7 @@ export default function Home() {
               subtitle: t.raw("hero.subtitle"),
               cta: t.raw("hero.cta"),
             }}
+            campaign={t.raw("campaign")}
             scrollToRewards={scrollToRewards}
           />
         </div>
@@ -83,25 +78,13 @@ export default function Home() {
           <StorySection messages={t.raw("story")} />
         </div>
 
-        <PreservationSection messages={t.raw("preservation")} />
-
-        <div id="box-content">
-          <BoxContentSection messages={t.raw("boxContent")} />
+        <div id="rewards">
+          <RewardsSection
+            title={t.raw("rewards.title")}
+            subtitle={t.raw("rewards.subtitle")}
+            rewards={t.raw("rewards.tiers")}
+          />
         </div>
-
-        <CookingSection messages={t.raw("cooking")} />
-
-        <CommunitySection messages={t.raw("community")} />
-
-        <div id="team">
-          <TeamSection messages={t.raw("team")} />
-        </div>
-
-        <div id="stretch-goals">
-          <StretchGoalsSection messages={t.raw("stretchGoals")} />
-        </div>
-
-        <TimelineSection messages={t.raw("timeline")} />
 
         <div id="faq">
           <FAQSection messages={t.raw("faq")} />

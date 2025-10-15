@@ -10,11 +10,26 @@ interface HeroSectionProps {
     subtitle: string;
     cta: string;
   };
+  campaign: {
+    pledged: string;
+    goal: string;
+    backers: string;
+    daysLeft: string;
+    percentFunded: number;
+    status: string;
+    labels: {
+      pledged: string;
+      goal: string;
+      backers: string;
+      daysLeft: string;
+    };
+  };
   scrollToRewards: () => void;
 }
 
 export default function HeroSection({
   messages,
+  campaign,
   scrollToRewards,
 }: HeroSectionProps) {
   const [mounted, setMounted] = useState(false);
@@ -25,12 +40,18 @@ export default function HeroSection({
 
   if (!mounted) {
     return (
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-amber-50 to-orange-100">
-        <div className="text-center">
-          <div className="animate-pulse">
-            <div className="h-16 bg-gray-300 rounded mb-4 mx-auto max-w-4xl"></div>
-            <div className="h-8 bg-gray-300 rounded mb-8 mx-auto max-w-2xl"></div>
-            <div className="h-12 bg-gray-300 rounded mx-auto max-w-xs"></div>
+      <section className="bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="animate-pulse">
+              <div className="h-8 bg-gray-300 rounded mb-4"></div>
+              <div className="h-16 bg-gray-300 rounded mb-6"></div>
+              <div className="h-4 bg-gray-300 rounded mb-8"></div>
+              <div className="h-12 bg-gray-300 rounded w-48"></div>
+            </div>
+            <div className="animate-pulse">
+              <div className="aspect-video bg-gray-300 rounded-lg"></div>
+            </div>
           </div>
         </div>
       </section>
@@ -38,75 +59,118 @@ export default function HeroSection({
   }
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/images/kvs-xet-11.jpg"
-          alt="UmamiBox Hero Background"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-black/40"></div>
-      </div>
-
-      {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center text-white">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-5xl mx-auto"
-        >
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight"
-          >
-            {messages.title}
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-lg md:text-xl lg:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed text-gray-100"
-          >
-            {messages.subtitle}
-          </motion.p>
-
-          <motion.button
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            onClick={scrollToRewards}
-            className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white font-bold py-4 px-8 rounded-full text-lg md:text-xl transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-orange-500/25"
-          >
-            {messages.cta}
-          </motion.button>
-        </motion.div>
-
-        {/* Scroll Indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1.2 }}
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        >
+    <section className="bg-white border-b border-gray-200">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Column - Project Info */}
           <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            className="w-6 h-10 border-2 border-white rounded-full flex justify-center"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="space-y-8"
           >
-            <motion.div
-              animate={{ y: [0, 12, 0] }}
-              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-              className="w-1 h-3 bg-white rounded-full mt-2"
-            ></motion.div>
+            {/* Project Title */}
+            <div>
+              <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 leading-tight mb-4">
+                {messages.title}
+              </h1>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                {messages.subtitle}
+              </p>
+            </div>
+
+            {/* Campaign Stats */}
+            <div className="space-y-6">
+              {/* Funding Progress */}
+              <div>
+                <div className="flex items-baseline space-x-2 mb-2">
+                  <span className="text-3xl font-bold text-green-600">
+                    {campaign.pledged}
+                  </span>
+                  <span className="text-gray-600">
+                    {campaign.labels.pledged} {campaign.goal} {campaign.labels.goal}
+                  </span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-3 mb-4">
+                  <motion.div
+                    initial={{ width: 0 }}
+                    animate={{ width: `${Math.min(campaign.percentFunded, 100)}%` }}
+                    transition={{ duration: 1.5, delay: 0.5 }}
+                    className="bg-green-500 h-3 rounded-full"
+                  ></motion.div>
+                </div>
+                {campaign.percentFunded > 100 && (
+                  <div className="text-green-600 font-semibold text-sm">
+                    {campaign.percentFunded}% {campaign.status}
+                  </div>
+                )}
+              </div>
+
+              {/* Stats Grid */}
+              <div className="grid grid-cols-2 gap-6">
+                <div>
+                  <div className="text-2xl font-bold text-gray-900">
+                    {campaign.backers}
+                  </div>
+                  <div className="text-gray-600 text-sm">
+                    {campaign.labels.backers}
+                  </div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-gray-900">
+                    {campaign.daysLeft}
+                  </div>
+                  <div className="text-gray-600 text-sm">
+                    {campaign.labels.daysLeft}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA Button */}
+            <motion.button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              onClick={scrollToRewards}
+              className="w-full lg:w-auto bg-green-600 hover:bg-green-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors duration-200 text-lg"
+            >
+              {messages.cta}
+            </motion.button>
           </motion.div>
-        </motion.div>
+
+          {/* Right Column - Media */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="relative"
+          >
+            <div className="aspect-video rounded-lg overflow-hidden shadow-xl">
+              <Image
+                src="/images/kvs-xet-11.jpg"
+                alt="UmamiBox Product"
+                fill
+                className="object-cover"
+                priority
+              />
+              {/* Play Button Overlay */}
+              <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-20 hover:bg-opacity-30 transition-all duration-200 cursor-pointer group">
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  className="w-16 h-16 bg-white bg-opacity-90 rounded-full flex items-center justify-center shadow-lg group-hover:bg-opacity-100 transition-all duration-200"
+                >
+                  <svg
+                    className="w-6 h-6 text-gray-800 ml-1"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M6.3 2.841A1.5 1.5 0 004 4.11V15.89a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
+                  </svg>
+                </motion.div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </section>
   );

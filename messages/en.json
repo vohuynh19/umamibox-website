@@ -1,19 +1,93 @@
 {
+  "campaign": {
+    "pledged": "$45,230",
+    "goal": "$25,000",
+    "backers": "287",
+    "daysLeft": "23",
+    "percentFunded": 181,
+    "status": "Funded",
+    "labels": {
+      "pledged": "pledged of",
+      "goal": "goal",
+      "backers": "backers",
+      "daysLeft": "days to go"
+    }
+  },
   "header": {
     "logo": "UmamiBox",
     "nav": {
-      "story": "Our Story",
-      "products": "Products",
-      "team": "Team",
+      "story": "Story",
+      "rewards": "Rewards",
       "faq": "FAQ"
     },
-    "cta": "Choose Package",
+    "cta": "Back this project",
     "language": "Language"
   },
   "hero": {
     "title": "UmamiBox: Open Your Door to Healthy, 100% Vietnamese Beef with Japanese Standards",
     "subtitle": "Premium quality beef from Vietnam's finest farms, preserved and delivered using Japanese standards, straight to your door every month.",
     "cta": "Choose Your Package"
+  },
+  "rewards": {
+    "title": "Choose Your Reward",
+    "subtitle": "Select the perfect UmamiBox package for you. All rewards include premium Vietnamese beef with Japanese preservation standards.",
+    "tiers": [
+      {
+        "id": "early-bird",
+        "title": "Early Bird Special",
+        "price": "$89",
+        "originalPrice": "$120",
+        "description": "Perfect for trying UmamiBox for the first time. Get premium Vietnamese beef delivered monthly with our signature preservation method.",
+        "includes": [
+          "1 month UmamiBox subscription",
+          "2kg premium Vietnamese beef cuts",
+          "Japanese-standard preservation packaging",
+          "Cooking guide and recipes",
+          "Free shipping within Vietnam"
+        ],
+        "delivery": "March 2024",
+        "backers": 89,
+        "limited": true,
+        "remaining": 11,
+        "popular": false
+      },
+      {
+        "id": "monthly-box",
+        "title": "Monthly UmamiBox",
+        "price": "$120",
+        "description": "Our most popular option! Get a monthly delivery of premium Vietnamese beef with Japanese preservation standards.",
+        "includes": [
+          "1 month UmamiBox subscription",
+          "2.5kg premium Vietnamese beef cuts",
+          "Japanese-standard preservation packaging",
+          "Detailed cooking guide and recipes",
+          "Free shipping within Vietnam",
+          "Access to exclusive cooking videos"
+        ],
+        "delivery": "March 2024",
+        "backers": 156,
+        "popular": true
+      },
+      {
+        "id": "quarterly-box",
+        "title": "Quarterly Premium Box",
+        "price": "$320",
+        "originalPrice": "$360",
+        "description": "Save more with our 3-month package. Perfect for families who want consistent access to premium Vietnamese beef.",
+        "includes": [
+          "3 month UmamiBox subscription",
+          "2.5kg premium Vietnamese beef cuts per month",
+          "Japanese-standard preservation packaging",
+          "Comprehensive cooking guide and recipe book",
+          "Free shipping within Vietnam",
+          "Access to exclusive cooking videos",
+          "Priority customer support"
+        ],
+        "delivery": "March 2024",
+        "backers": 42,
+        "popular": false
+      }
+    ]
   },
   "story": {
     "title": "Our Story",

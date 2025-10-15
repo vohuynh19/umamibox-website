@@ -1,19 +1,93 @@
 {
+  "campaign": {
+    "pledged": "$45,230",
+    "goal": "$25,000",
+    "backers": "287",
+    "daysLeft": "23",
+    "percentFunded": 181,
+    "status": "Đã Đạt Mục Tiêu",
+    "labels": {
+      "pledged": "đã huy động từ mục tiêu",
+      "goal": "mục tiêu",
+      "backers": "người ủng hộ",
+      "daysLeft": "ngày còn lại"
+    }
+  },
   "header": {
     "logo": "UmamiBox",
     "nav": {
-      "story": "Câu chuyện của chúng tôi",
-      "products": "Sản phẩm",
-      "team": "Đội ngũ",
+      "story": "Câu chuyện",
+      "rewards": "Phần thưởng",
       "faq": "Câu hỏi thường gặp"
     },
-    "cta": "Chọn gói",
-    "language": "Ngôn ngữ"
+    "cta": "Ủng Hộ Dự Án",
+    "language": "Ngôn Ngữ"
   },
   "hero": {
     "title": "UmamiBox: Mở cửa nhận thịt bò khỏe mạnh, 100% nội địa Việt Nam với tiêu chuẩn Nhật",
     "subtitle": "Thịt bò chất lượng cao từ những trang trại tốt nhất Việt Nam, được bảo quản và vận chuyển theo tiêu chuẩn Nhật Bản, giao tận nhà mỗi tháng.",
     "cta": "Chọn gói của bạn"
+  },
+  "rewards": {
+    "title": "Chọn Phần Thưởng Của Bạn",
+    "subtitle": "Chọn gói UmamiBox hoàn hảo cho bạn. Tất cả phần thưởng đều bao gồm thịt bò Việt Nam cao cấp với tiêu chuẩn bảo quản Nhật Bản.",
+    "tiers": [
+      {
+        "id": "early-bird",
+        "title": "Ưu Đãi Đặt Sớm",
+        "price": "2.200.000₫",
+        "originalPrice": "2.900.000₫",
+        "description": "Hoàn hảo để thử UmamiBox lần đầu tiên. Nhận thịt bò Việt Nam cao cấp được giao hàng hàng tháng với phương pháp bảo quản đặc trưng của chúng tôi.",
+        "includes": [
+          "Đăng ký UmamiBox 1 tháng",
+          "2kg thịt bò Việt Nam cao cấp đã cắt",
+          "Bao bì bảo quản tiêu chuẩn Nhật Bản",
+          "Hướng dẫn nấu ăn và công thức",
+          "Miễn phí vận chuyển trong Việt Nam"
+        ],
+        "delivery": "Tháng 3 năm 2024",
+        "backers": 89,
+        "limited": true,
+        "remaining": 11,
+        "popular": false
+      },
+      {
+        "id": "monthly-box",
+        "title": "UmamiBox Hàng Tháng",
+        "price": "2.900.000₫",
+        "description": "Lựa chọn phổ biến nhất của chúng tôi! Nhận giao hàng hàng tháng thịt bò Việt Nam cao cấp với tiêu chuẩn bảo quản Nhật Bản.",
+        "includes": [
+          "Đăng ký UmamiBox 1 tháng",
+          "2.5kg thịt bò Việt Nam cao cấp đã cắt",
+          "Bao bì bảo quản tiêu chuẩn Nhật Bản",
+          "Hướng dẫn nấu ăn chi tiết và công thức",
+          "Miễn phí vận chuyển trong Việt Nam",
+          "Truy cập video nấu ăn độc quyền"
+        ],
+        "delivery": "Tháng 3 năm 2024",
+        "backers": 156,
+        "popular": true
+      },
+      {
+        "id": "quarterly-box",
+        "title": "Hộp Cao Cấp Theo Quý",
+        "price": "7.700.000₫",
+        "originalPrice": "8.700.000₫",
+        "description": "Tiết kiệm hơn với gói 3 tháng của chúng tôi. Hoàn hảo cho các gia đình muốn có quyền truy cập nhất quán vào thịt bò Việt Nam cao cấp.",
+        "includes": [
+          "Đăng ký UmamiBox 3 tháng",
+          "2.5kg thịt bò Việt Nam cao cấp đã cắt mỗi tháng",
+          "Bao bì bảo quản tiêu chuẩn Nhật Bản",
+          "Hướng dẫn nấu ăn toàn diện và sách công thức",
+          "Miễn phí vận chuyển trong Việt Nam",
+          "Truy cập video nấu ăn độc quyền",
+          "Hỗ trợ khách hàng ưu tiên"
+        ],
+        "delivery": "Tháng 3 năm 2024",
+        "backers": 42,
+        "popular": false
+      }
+    ]
   },
   "story": {
     "title": "Câu chuyện của chúng tôi",

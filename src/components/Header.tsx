@@ -9,8 +9,7 @@ interface HeaderProps {
     logo: string;
     nav: {
       story: string;
-      products: string;
-      team: string;
+      rewards: string;
       faq: string;
     };
     cta: string;
@@ -48,8 +47,7 @@ export default function Header({
 
   const navItems = [
     { label: messages.nav.story, href: "story" },
-    { label: messages.nav.products, href: "box-content" },
-    { label: messages.nav.team, href: "team" },
+    { label: messages.nav.rewards, href: "rewards" },
     { label: messages.nav.faq, href: "faq" },
   ];
 
