@@ -68,15 +68,12 @@ export default function Header({
           type="button"
         >
           <Image
-            src="/logo.png"
+            src="/logo-horizontal.png"
             alt={messages.logo}
-            width={40}
+            width={160}
             height={40}
-            className="h-9 w-9 rounded-full border border-gray-200 object-cover"
+            className="h-40 w-160 object-cover"
           />
-          <span className="text-xl font-semibold text-gray-900 lg:text-2xl">
-            {messages.logo}
-          </span>
         </motion.button>
 
         {/* Desktop Navigation */}
