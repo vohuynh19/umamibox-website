@@ -155,7 +155,7 @@ export default function StorySection({ messages }: StorySectionProps) {
             </h2>
             <p className="text-lg font-semibold text-gray-800 mb-4">
               Title: Thịt bò 100% nội địa Việt Nam theo tiêu chuẩn Nhật giao đến
-              tận nhà bạn chỉ với ~140k/bữa
+              tận nhà bạn hỉ với ~140k/bữa
             </p>
             <p className="text-base text-gray-700 leading-relaxed mb-6">
               Chúng tôi đã dành vô số thời gian để tìm kiếm và hợp tác với những
