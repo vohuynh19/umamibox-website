@@ -4,6 +4,7 @@ export { default as ProjectNav } from "./ProjectNav";
 export { default as RewardsSidebar } from "./RewardsSidebar";
 export { default as RewardsSection } from "./RewardsSection";
 export { default as StorySection } from "./StorySection";
+export { default as StoryNavbar } from "./StoryNavbar";
 export { default as PreservationSection } from "./PreservationSection";
 export { default as BoxContentSection } from "./BoxContentSection";
 export { default as CookingSection } from "./CookingSection";

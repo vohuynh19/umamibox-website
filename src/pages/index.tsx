@@ -9,6 +9,7 @@ import {
   RewardsSidebar,
   RewardsSection,
   StorySection,
+  StoryNavbar,
   FAQSection,
   Footer,
 } from "@/components";
@@ -86,7 +87,32 @@ export default function Home() {
 
         <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-12">
-            <div className="space-y-16 lg:col-span-8">
+            {/* Left Sidebar - Story Navigation */}
+            <div className="hidden lg:block lg:col-span-2">
+              <StoryNavbar
+                items={[
+                  { id: "story-founder", label: "Giới thiệu founders" },
+                  { id: "story-imported", label: "Về thịt nhập khẩu & nội địa" },
+                  {
+                    id: "story-advantages",
+                    label: "Ưu điểm thổ nhưỡng Việt Nam",
+                  },
+                  { id: "story-solution", label: "Giải pháp của chúng tôi" },
+                  { id: "story-preservation", label: "Quy trình Ủ và bảo quản" },
+                  { id: "story-box-content", label: "Trong hộp có gì" },
+                  { id: "story-support", label: "Sự ủng hộ của bạn" },
+                  { id: "story-goals", label: "Mục tiêu mở rộng" },
+                  { id: "story-team", label: "Giới thiệu đội ngũ" },
+                  { id: "story-timeline", label: "Timeline" },
+                  { id: "story-faq", label: "FAQ" },
+                  { id: "story-other-questions", label: "Other Questions" },
+                  { id: "story-challenges", label: "Thách thức" },
+                ]}
+              />
+            </div>
+
+            {/* Center - Story Content */}
+            <div className="space-y-16 lg:col-span-6">
               <section id="story">
                 <StorySection messages={t.raw("story")} />
               </section>
@@ -96,6 +122,7 @@ export default function Home() {
               </section>
             </div>
 
+            {/* Right Sidebar - Rewards */}
             <div className="lg:col-span-4">
               <RewardsSidebar
                 rewards={t.raw("rewards.tiers")}
