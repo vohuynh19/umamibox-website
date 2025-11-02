@@ -5,11 +5,7 @@ import Image from "next/image";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 
-interface StorySectionProps {
-  messages: any; // Using any for now to allow flexible content structure
-}
-
-export default function StorySection({ messages }: StorySectionProps) {
+export default function StorySection() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
@@ -65,8 +61,8 @@ export default function StorySection({ messages }: StorySectionProps) {
                   <span className="font-medium text-gray-900">
                     Tôi và các cộng sự của mình đang làm việc với cùng 1 chí hướng:
                     để đem cho người Việt Nam thịt với tiêu chuẩn cao hơn. Chúng
-                    tôi xin mời bạn tham gia cùng chúng tôi trong hành trình "quay
-                    lại với miền quê" này - Chắc chắn thịt sẽ ngọt!
+                    tôi xin mời bạn tham gia cùng chúng tôi trong hành trình &ldquo;quay
+                    lại với miền quê&rdquo; này - Chắc chắn thịt sẽ ngọt!
                   </span>
                 </p>
               </div>
@@ -128,10 +124,10 @@ export default function StorySection({ messages }: StorySectionProps) {
             </h2>
             <p className="text-lg font-semibold text-gray-800 mb-4">
               Title: Biết thịt bạn và gia đình đang ăn đến từ đâu không còn là
-              "biết thì tốt", mà phải là "biết mới mua"
+              &ldquo;biết thì tốt&rdquo;, mà phải là &ldquo;biết mới mua&rdquo;
             </p>
             <p className="text-base text-gray-700 leading-relaxed mb-6">
-              Hãy cùng chúng tôi "quay lại với miền quê", nơi những chú bò được
+              Hãy cùng chúng tôi &ldquo;quay lại với miền quê&rdquo;, nơi những chú bò được
               chăm sóc, nuôi lớn trên vùng thổ nhưỡng trù phú của Ba Vì-Tam Đảo,
               Tây Nguyên. Từ những nông trại 100% nội địa Việt Nam, cùng với quy
               trình nuôi dưỡng, chăm sóc và bảo quản theo tiêu chuẩn Nhật Bản,
@@ -177,7 +173,7 @@ export default function StorySection({ messages }: StorySectionProps) {
           {/* 5. Aging and Preservation Process */}
           <section id="story-preservation" className="scroll-mt-24">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              Quy trình "Ủ" và bảo quản
+              Quy trình &ldquo;Ủ&rdquo; và bảo quản
             </h2>
             <p className="text-base font-semibold text-gray-800 mb-4">
               Title: Ở nhiệt độ trung bình ở các chợ Việt Nam, cứ mỗi 20 phút số
@@ -193,15 +189,18 @@ export default function StorySection({ messages }: StorySectionProps) {
               Đó là lý do vì sao các quốc gia như Mỹ và châu Âu từ lâu đã áp dụng
               phương pháp{" "}
               <span className="font-semibold">dry-aging hay wet-aging</span> – hay
-              còn gọi là <span className="italic">"Ủ" thịt bò</span> – trong môi
+              còn gọi là <span className="italic">&ldquo;Ủ&rdquo; thịt bò</span> – trong môi
               trường lạnh 0–2°C. Đây là quá trình cho phép enzyme tự nhiên làm mềm
               thịt và tạo ra hương vị umami đậm đà. Kết hợp với công nghệ{" "}
               <span className="font-semibold">flash freeze</span> –{" "}
               <span className="italic">cấp lạnh siêu tốc ở –40°C</span> – họ có thể
-              "khóa lại" độ tươi ngon ở đỉnh cao nhất, mà không phá vỡ cấu trúc thịt
+              &ldquo;khóa lại&rdquo; độ tươi ngon ở đỉnh cao nhất, mà không phá vỡ cấu trúc thịt
               hay làm hao hụt dinh dưỡng.
             </p>
-            <div className="relative w-full rounded-lg overflow-hidden shadow-md mb-6" style={{ aspectRatio: "568/380" }}>
+            <div
+              className="relative w-full rounded-lg overflow-hidden shadow-md mb-6"
+              style={{ aspectRatio: "568/380" }}
+            >
               <Image
                 src="/images/image1.png"
                 alt="Aging process"
@@ -217,12 +216,12 @@ export default function StorySection({ messages }: StorySectionProps) {
             </p>
             <p className="text-base text-gray-700 leading-relaxed mb-4">
               Chúng tôi ứng dụng trọn vẹn cả hai công nghệ tiên tiến –{" "}
-              <span className="italic">"Ủ" ướt + cấp lạnh siêu tốc</span> – vào từng
+              <span className="italic">&ldquo;Ủ&rdquo; ướt + cấp lạnh siêu tốc</span> – vào từng
               miếng thịt. Kết quả là sản phẩm đạt đến{" "}
               <span className="font-semibold">108% hương vị</span>, với độ mềm, độ
               ngọt và độ tươi mà bạn có thể cảm nhận ngay từ lần đầu nấu thử. Mỗi hộp
               thịt giao đến tay bạn được bảo quản trong{" "}
-              <span className="font-semibold">chuỗi lạnh khép kín</span>, giám sát
+              <span className="font-semibold">&ldquo;chuỗi lạnh khép kín&rdquo;</span>, giám sát
               bằng cảm biến và trí tuệ nhân tạo để đảm bảo không một phút nào vượt
               ngoài ngưỡng an toàn.
             </p>
@@ -247,7 +246,10 @@ export default function StorySection({ messages }: StorySectionProps) {
             <h2 className="text-2xl font-bold text-gray-900 mb-6">
               Trong hộp có gì
             </h2>
-            <div className="relative w-full rounded-lg overflow-hidden shadow-md mb-6" style={{ aspectRatio: "601.7/450.67" }}>
+            <div
+              className="relative w-full rounded-lg overflow-hidden shadow-md mb-6"
+              style={{ aspectRatio: "601.7/450.67" }}
+            >
               <Image
                 src="/images/image4.png"
                 alt="Box contents"
@@ -285,7 +287,7 @@ export default function StorySection({ messages }: StorySectionProps) {
           <section id="story-support" className="scroll-mt-24">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">
               Sự ủng hộ của bạn sẽ cho phép chúng tôi cung cấp nhiều loại thịt hơn
-              (thịt lợn, hải sản, thịt gà, …) và lan rộng phong trào "thịt từ quê"
+              (thịt lợn, hải sản, thịt gà, …) và lan rộng phong trào &ldquo;thịt từ quê&rdquo;
               trên khắp Việt Nam.
             </h2>
             <p className="text-base text-gray-700 mb-4">1 tháng</p>
@@ -309,7 +311,7 @@ export default function StorySection({ messages }: StorySectionProps) {
             <p className="text-base text-gray-700 mb-4">Gà & Heo</p>
             <p className="text-base text-gray-700 mb-4 font-semibold">500 triệu</p>
             <p className="text-base text-gray-700 leading-relaxed mb-6">
-              Tại cột mốc này, bạn có thể chọn nâng cấp hộp của bạn thành "Mixed Box"
+              Tại cột mốc này, bạn có thể chọn nâng cấp hộp của bạn thành &ldquo;Mixed Box&rdquo;
               với 100% bò, gà thả đồng cùng với 100% heo hữu cơ.
             </p>
             <p className="text-base text-gray-700 mb-4 font-semibold">1 tỷ</p>

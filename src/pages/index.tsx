@@ -27,10 +27,10 @@ export default function Home() {
     router.push(router.pathname, router.asPath, { locale });
   };
 
-  const scrollToRewards = () => {
-    const rewardsSection = document.getElementById("rewards");
-    if (rewardsSection) {
-      rewardsSection.scrollIntoView({ behavior: "smooth" });
+  const scrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -73,15 +73,15 @@ export default function Home() {
               cta: t.raw("hero.cta"),
             }}
             campaign={t.raw("campaign")}
-            scrollToRewards={scrollToRewards}
+            scrollToRewards={() => scrollToSection("rewards")}
           />
         </section>
 
         <ProjectNav
           items={[
-            { label: t("header.nav.story"), href: "story" },
-            { label: t("header.nav.rewards"), href: "rewards" },
-            { label: t("header.nav.faq"), href: "faq" },
+            { label: t("header.nav.story"), href: "story-founder", onClick: () => scrollToSection("story-founder") },
+            { label: t("header.nav.rewards"), href: "rewards", onClick: () => scrollToSection("rewards") },
+            { label: t("header.nav.faq"), href: "faq", onClick: () => scrollToSection("faq") },
           ]}
         />
 
@@ -96,6 +96,8 @@ export default function Home() {
                   {
                     id: "story-advantages",
                     label: "Ưu điểm thổ nhưỡng Việt Nam",
+                    // Removed href
+                    // Removed onClick
                   },
                   { id: "story-solution", label: "Giải pháp của chúng tôi" },
                   { id: "story-preservation", label: "Quy trình Ủ và bảo quản" },
@@ -113,9 +115,10 @@ export default function Home() {
 
             {/* Center - Story Content */}
             <div className="space-y-16 lg:col-span-6">
-              <section id="story">
-                <StorySection messages={t.raw("story")} />
-              </section>
+            <section id="story">
+                <StorySection />  {/* remove messages={t.raw("story")} */}
+            </section>
+
 
               <section id="faq">
                 <FAQSection messages={t.raw("faq")} />
@@ -126,7 +129,7 @@ export default function Home() {
             <div className="lg:col-span-4">
               <RewardsSidebar
                 rewards={t.raw("rewards.tiers")}
-                onSelectReward={scrollToRewards}
+                onSelectReward={() => scrollToSection("rewards")}
               />
             </div>
           </div>

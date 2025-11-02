@@ -5,7 +5,8 @@ import { useEffect, useMemo, useState } from "react";
 
 interface ProjectNavItem {
   label: string;
-  href: string;
+  href?: string;
+  onClick?: () => void;
 }
 
 interface ProjectNavProps {
@@ -44,7 +45,7 @@ export default function ProjectNav({ items }: ProjectNavProps) {
     );
 
     sectionIds.forEach((id) => {
-      const element = document.getElementById(id);
+      const element = document.getElementById(id ?? "");
       if (element) {
         observer.observe(element);
       }
@@ -77,7 +78,7 @@ export default function ProjectNav({ items }: ProjectNavProps) {
             return (
               <motion.button
                 key={item.href}
-                onClick={() => handleClick(item.href)}
+                onClick={() => item.onClick ? item.onClick() : item.href ? handleClick(item.href) : undefined}
                 className={`relative whitespace-nowrap rounded-full px-3 py-1.5 transition-colors duration-200 ${
                   isActive
                     ? "bg-gray-900 text-white shadow-sm"
