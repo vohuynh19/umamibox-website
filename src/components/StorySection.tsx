@@ -1,364 +1,354 @@
 "use client";
 
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import Image from "next/image";
-import { useInView } from "framer-motion";
+// import { useInView } from "framer-motion";
 import { useRef } from "react";
+
+/** Tiêu đề thường (capitalize, to hơn) */
+const Title = ({ children }: { children: React.ReactNode }) => (
+  <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-6 capitalize">
+    {children}
+  </h2>
+);
+
+/** Tiêu đề căn giữa (UPPERCASE, nhỏ hơn 1 xíu, không border) */
+const CenterTitle = ({ children }: { children: React.ReactNode }) => (
+  <div className="text-center">
+    <p className="text-xl lg:text-2xl font-bold text-gray-900 mb-6 uppercase tracking-wide">
+      {children}
+    </p>
+  </div>
+);
 
 export default function StorySection() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
+  // const isInView = useInView(ref, { once: true, margin: "-50px" });
 
   return (
     <section ref={ref} id="story" className="py-16 bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Title */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.6 }}
-          className="mb-12"
-        >
-          <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-            Campaign
-          </h1>
-          <p className="text-xl text-gray-700 mb-2">
-            Đề chính: UmamiBox: Mở cửa nhận thịt bò khỏe mạnh, 100% nội địa Việt
-            Nam với tiêu chuẩn Nhật
-          </p>
-          <p className="text-lg text-gray-600">
-            Đề phụ: Nguồn Protein khỏe mạnh hữu cơ 100% đến từ vùng đồng cỏ thổ
-            nhưỡng tại Ba Vì-Tam Đảo, Tây Nguyên, Việt Nam. Minh bạch bạn có thể
-            xem, Vị ngon bạn có thể nếm, Giao tận nhà khi bạn cần.
-          </p>
-        </motion.div>
-
-        {/* Story Sections */}
         <div className="space-y-12">
-          {/* 1. Founder Introduction */}
+          {/* 1) CÂU CHUYỆN */}
           <section id="story-founder" className="scroll-mt-24">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              Giới thiệu founders
-            </h2>
-            <div className="flex flex-col lg:flex-row items-start gap-8 mb-6">
-              <div className="lg:w-1/3">
-                <div className="relative w-full aspect-square rounded-lg overflow-hidden shadow-lg">
+            <Title>Câu chuyện</Title>
+
+            <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden shadow-md mb-6">
+              <Image
+                src="/images/image21.jpg"
+                alt="Câu chuyện – hình ảnh"
+                fill
+                className="object-cover"
+              />
+            </div>
+
+            <p className="text-lg text-gray-800 leading-relaxed lowercase">
+              xin chào! tôi là hoàng hiệp. tôi đặc biệt quan tâm đến sức khỏe và
+              đã dành nhiều năm để phát triển các sản phẩm công nghệ giúp kiểm tra,
+              nâng cao chất lượng nông sản việt cho người tiêu dùng. gần đây, tôi
+              nhận thấy một vấn đề trực tiếp ảnh hưởng đến sức khỏe gia đình: thịt.
+              tôi và các cộng sự của mình đang làm việc với cùng một chí hướng:
+              đem tới cho người việt nam thịt với tiêu chuẩn cao hơn, minh bạch hơn.
+              chúng tôi mời bạn tham gia vào hành trình &ldquo;quay lại với miền quê&rdquo; này –
+              <em> chắc chắn thịt sẽ ngọt!</em>
+            </p>
+          </section>
+
+          {/* 2) TRUYỀN THÔNG */}
+          <section id="press" className="scroll-mt-24">
+            <CenterTitle>Truyền Thông</CenterTitle>
+
+            <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden shadow-md mb-6">
+              <Image
+                src="/images/image12.png"
+                alt="VTV đưa tin"
+                fill
+                className="object-cover"
+              />
+            </div>
+
+            <p className="mb-3 text-2xl font-semibold leading-snug text-gray-900">
+              VTV chia sẻ: Trong nửa đầu năm 2025, Việt Nam đã nhập khẩu tới 103
+              nghìn tấn thịt trâu Ấn Độ.
+            </p>
+
+            <p className="text-base text-gray-800 leading-relaxed mb-6">
+              &ldquo;Đây là giống trâu chuyên nuôi lấy sữa, cho sản lượng sữa cao nhưng
+              chất lượng thịt lại kém, ăn không ngon. Dù vậy, điều nghịch lý là loại
+              thịt này vẫn tiêu thụ mạnh tại Việt Nam...&rdquo;
+            </p>
+
+            <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden shadow-md mb-6">
+              <Image
+                src="/images/image11.png"
+                alt="Điều tra thịt trâu Ấn Độ"
+                fill
+                className="object-cover"
+              />
+            </div>
+
+            <p className="text-base text-gray-800 leading-relaxed mb-6">
+              Cơ quan điều tra đã thu giữ 17.000kg bột tinh chất để bơm vào thịt
+              trâu Ấn Độ để tạo vân mỡ giống thịt bò cao cấp. Người tiêu dùng bỏ tiền
+              mua thịt bò nhập khẩu đắt đỏ nhưng thực chất chỉ là thịt trâu giá rẻ.
+            </p>
+
+            <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden shadow-md mb-6">
+              <Image
+                src="/images/image18.png"
+                alt="Số liệu nhập khẩu"
+                fill
+                className="object-cover"
+              />
+            </div>
+
+            <p className="text-2xl font-semibold text-gray-900 mb-2">
+              Tại sao &gt;50% thịt trên thị trường là nhập khẩu?
+            </p>
+            <p className="text-base text-gray-700 mb-4">
+              Trong khi Việt Nam là quốc gia có truyền thống nông nghiệp – chăn nuôi
+              dồi dào, chất lượng luôn đứng top đầu thế giới.
+            </p>
+            <p className="text-base text-gray-800 leading-relaxed mb-4">
+              Giữa một đất nước trù phú như Việt Nam, thật khó tin khi hơn một nửa
+              lượng thịt người Việt ăn mỗi ngày lại đến từ container lạnh vượt hàng
+              chục nghìn cây số. Thịt nhập khẩu rẻ hơn vì quy mô công nghiệp lớn.
+            </p>
+            <p className="text-base text-gray-800 leading-relaxed mb-4">
+              Thịt nội địa Việt Nam tuy an toàn và chất lượng tự nhiên, nhưng giá
+              thành vẫn cao hơn do phần lớn các hộ chăn nuôi còn nhỏ lẻ, thiếu quy
+              trình đồng bộ.
+            </p>
+            <p className="text-base text-gray-800 leading-relaxed mb-6">
+              Mỗi chú bò được nuôi hữu cơ 100% – ăn cỏ, thân chuối, ngô, đậu và lúa
+              gạo – nên thịt thơm ngọt, thuần khiết và đáng tin cậy.
+            </p>
+            <p className="text-base font-semibold text-gray-900">
+              → Chúng tôi sẽ đưa thịt nội địa 100% theo tiêu chuẩn cao hơn đến với
+              mỗi bàn ăn của người Việt.
+            </p>
+          </section>
+
+          {/* 3) ƯU ĐIỂM */}
+          <section id="advantages" className="scroll-mt-24">
+            <Title>
+              Biết thịt bạn và gia đình đang ăn đến từ đâu không còn là “biết thì tốt”, mà phải là “biết mới mua”
+            </Title>
+            <p className="text-base text-gray-800 leading-relaxed mb-6">
+              Hãy cùng chúng tôi “quay lại với miền quê”, nơi những chú bò được chăm
+              sóc, nuôi lớn trên vùng thổ nhưỡng trù phú của Ba Vì – Tam Đảo, Tây
+              Nguyên. Thịt được nuôi, chăm sóc, bảo quản theo tiêu chuẩn Nhật Bản —
+              tươi hơn, sạch hơn, minh bạch hơn.
+            </p>
+            <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden shadow-md mb-6">
+              <Image
+                src="/images/image14.png"
+                alt="Minh bạch từ trang trại đến bàn ăn"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </section>
+
+          {/* 4) GIÁ & GIẢI PHÁP */}
+          <section id="solution" className="scroll-mt-24">
+            <Title>
+              Thịt bò 100% nội địa Việt Nam theo tiêu chuẩn Nhật giao đến tận nhà chỉ với ~140k/bữa
+            </Title>
+            <p className="text-base text-gray-800 leading-relaxed mb-6">
+              Chúng tôi hợp tác với các trang trại đạt chuẩn Nhật Bản tại Việt Nam,
+              mang đến cho bạn loại thịt không chất độc hại, tươi ngon tự nhiên và dễ
+              tiếp cận.
+            </p>
+            <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden shadow-md mb-6">
+              <Image
+                src="/images/image17.png"
+                alt="Giao đến tận nhà"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </section>
+
+          {/* 5) QUY TRÌNH Ủ & BẢO QUẢN */}
+          <section id="aging" className="scroll-mt-24">
+            <Title>
+              Ở nhiệt độ trung bình ở chợ Việt Nam, cứ mỗi 20 phút số lượng vi khuẩn nguy hiểm sẽ tăng gấp đôi
+            </Title>
+            <p className="text-base text-gray-700 mb-4">
+              Sau 1 giờ, thịt bò đã bắt đầu mất an toàn. Phân hủy nhẹ sau 3 giờ và hư
+              rõ sau 6–10 giờ. Nếu bảo quản nghiêm ngặt ở 0–4°C, thịt có thể giữ tươi
+              3–5 ngày mà vẫn đảm bảo dinh dưỡng.
+            </p>
+            <p className="text-base text-gray-800 leading-relaxed mb-6">
+              Chúng tôi ứng dụng công nghệ “Ủ ướt” và “Cấp lạnh siêu tốc –40°C” để
+              khóa độ tươi, giúp thịt đạt 108% hương vị – mềm, ngọt và tươi đỉnh cao.
+            </p>
+            <div className="relative w-full aspect-[16/9] rounded-lg overflow-hidden shadow-md mb-6">
+              <Image
+                src="/images/image8.png"
+                alt="Chuỗi lạnh khép kín"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </section>
+
+          {/* 6) PHẦN THƯỞNG */}
+          <section id="rewards" className="scroll-mt-24">
+            <CenterTitle>Phần Thưởng</CenterTitle>
+            <p className="text-2xl font-semibold text-gray-900 mb-3">
+              Sự ủng hộ của bạn sẽ cho phép chúng tôi cung cấp nhiều loại thịt hơn
+              (thịt lợn, hải sản, thịt gà, …) và lan rộng phong trào &ldquo;quay lại với miền quê&rdquo; trên khắp Việt Nam.
+            </p>
+            <p className="text-base text-gray-800 leading-relaxed mb-6">
+              Khi ủng hộ một trong những phần thưởng của chúng tôi, bạn sẽ không bị
+              ràng buộc trách nhiệm nào khác. Sau khi nhận hàng, bạn có thể trở thành
+              thành viên UmamiBox hàng tháng và nhận nhiều ưu đãi hơn nếu muốn.
+            </p>
+
+            {/* Ảnh hiển thị đầy đủ, không crop */}
+            {["image19", "image7", "image3", "image9", "image4", "image1"].map(
+              (img, i) => (
+                <div
+                  key={i}
+                  className="relative w-full h-[360px] rounded-lg overflow-hidden border border-gray-200 bg-white p-2 shadow-sm mb-4"
+                >
                   <Image
-                    src="/images/kvs-xet-7.jpg"
-                    alt="Founder"
+                    src={`/images/${img}.png`}
+                    alt={img}
                     fill
-                    className="object-cover"
+                    className="object-contain"
                   />
                 </div>
+              )
+            )}
+          </section>
+
+          {/* 7) ĐỘI NGŨ */}
+          <section id="team" className="scroll-mt-24">
+            <CenterTitle>Đội Ngũ</CenterTitle>
+            {["image10", "image16"].map((img, i) => (
+              <div
+                key={i}
+                className="relative w-full h-[380px] rounded-lg overflow-hidden border border-gray-200 bg-white p-2 shadow-sm mb-4"
+              >
+                <Image
+                  src={`/images/${img}.png`}
+                  alt={img}
+                  fill
+                  className="object-contain"
+                />
               </div>
-              <div className="lg:w-2/3">
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  Xin chào! Tôi là Hoàng Hiệp. Tôi là người đặc biệt quan tâm
-                  đến sức khỏe đã dành 4 năm qua để phát triển các sản phẩm công
-                  nghệ giúp kiểm tra, nâng cao chất lượng nông sản Việt đối với
-                  người tiêu dùng. Tôi gần đây nhận thấy một vấn đề trực tiếp ảnh
-                  hưởng đến sức khỏe gia đình: thịt.{" "}
-                  <span className="font-medium text-gray-900">
-                    Tôi và các cộng sự của mình đang làm việc với cùng 1 chí hướng:
-                    để đem cho người Việt Nam thịt với tiêu chuẩn cao hơn. Chúng
-                    tôi xin mời bạn tham gia cùng chúng tôi trong hành trình &ldquo;quay
-                    lại với miền quê&rdquo; này - Chắc chắn thịt sẽ ngọt!
-                  </span>
+            ))}
+          </section>
+
+          {/* 8) FAQ */}
+          <section id="faq" className="scroll-mt-24">
+            <Title>Câu hỏi thường gặp</Title>
+            <div className="space-y-8">
+              <div>
+                <p className="font-semibold text-gray-900 text-lg">
+                  Bao nhiêu thịt trong mỗi hộp?
+                </p>
+                <p className="mt-2 text-gray-800 leading-relaxed">
+                  3,5 - 5kg tùy thuộc vào lựa chọn miếng thịt. Phần thịt đủ cho 15–20
+                  bữa ăn riêng lẻ với khẩu phần 200–300g.
+                </p>
+              </div>
+
+              <div>
+                <p className="font-semibold text-gray-900 text-lg">
+                  Tại sao phải gọi hỗ trợ – mở bán đặt trước?
+                </p>
+                <p className="mt-2 text-gray-800 leading-relaxed">
+                  Để đảm bảo chất lượng thịt ngay từ đầu, chúng tôi cần nguồn vốn đủ
+                  để đầu tư vào công nghệ bảo quản và cam kết với các trang trại uy tín.
+                </p>
+              </div>
+
+              <div>
+                <p className="font-semibold text-gray-900 text-lg">
+                  Bạn nhập thịt từ đâu?
+                </p>
+                <p className="mt-2 text-gray-800 leading-relaxed">
+                  Tất cả thịt bò của chúng tôi đều đến từ các trang trại tại Tây Nguyên,
+                  Tam Đảo và Ba Vì — 100% nội địa Việt Nam.
+                </p>
+              </div>
+
+              <div>
+                <p className="font-semibold text-gray-900 text-lg">
+                  Bạn chọn loại thịt tôi sẽ nhận được hàng tháng phải không?
+                </p>
+                <p className="mt-2 text-gray-800 leading-relaxed">
+                  Đúng vậy. Đội ngũ chúng tôi chọn lọc kỹ từng hộp thịt mỗi tháng, đảm
+                  bảo hương vị đa dạng và chất lượng cao.
+                </p>
+              </div>
+
+              <div>
+                <p className="font-semibold text-gray-900 text-lg">
+                  Thịt được giao như thế nào?
+                </p>
+                <p className="mt-2 text-gray-800 leading-relaxed">
+                  Thịt được cấp lạnh nhanh bằng công nghệ flash freeze, đóng gói riêng
+                  lẻ và vận chuyển trong hộp xốp chứa đá khô để đảm bảo tươi ngon.
+                </p>
+              </div>
+
+              <div>
+                <p className="font-semibold text-gray-900 text-lg">
+                  Thịt có tươi khi nhận không?
+                </p>
+                <p className="mt-2 text-gray-800 leading-relaxed">
+                  Lượng đá khô được tính toán theo vị trí giao hàng. Dù bay hơi, thịt
+                  vẫn đông lạnh hoặc mát lạnh khi chạm vào.
+                </p>
+              </div>
+
+              <div>
+                <p className="font-semibold text-gray-900 text-lg">
+                  Tôi có thể chọn ngày giao hàng không?
+                </p>
+                <p className="mt-2 text-gray-800 leading-relaxed">
+                  Có. Chúng tôi sẽ liên hệ để sắp xếp thời gian giao hàng phù hợp nhất.
+                </p>
+              </div>
+
+              <div>
+                <p className="font-semibold text-gray-900 text-lg">
+                  Có cần ai ở nhà khi nhận hàng không?
+                </p>
+                <p className="mt-2 text-gray-800 leading-relaxed">
+                  Không bắt buộc, nhưng bạn nên mang hộp vào sớm nhất có thể để đảm bảo
+                  độ tươi ngon và chất lượng thịt cao nhất.
                 </p>
               </div>
             </div>
           </section>
 
-          {/* 2. About Imported vs Domestic Meat */}
-          <section id="story-imported" className="scroll-mt-24">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              Về thịt nhập khẩu & nội địa
-            </h2>
-            <p className="text-base text-gray-600 mb-4">
-              Hiện nay, trên một nửa lượng thịt bò mà bạn mua trên thị trường là
-              thịt bò nhập khẩu, trong đó 76% đến từ Ấn Độ.
+          {/* 9) LIÊN HỆ */}
+          <section id="contact" className="scroll-mt-24">
+            <Title>Câu hỏi khác?</Title>
+            <p className="text-gray-800">
+              Chúng tôi rất sẵn lòng hỗ trợ! Gửi cho chúng tôi một tin nhắn hoặc gọi
+              trực tiếp.
             </p>
-            <div className="mb-6">
-              <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-md">
-                <Image
-                  src="/images/image3.png"
-                  alt="News about imported meat"
-                  fill
-                  className="object-cover"
-                />
-              </div>
+            <div className="mt-3 space-y-1">
+              <a
+                href="mailto:support@umamibox.vn"
+                className="block font-semibold text-green-700 underline"
+              >
+                support@umamibox.vn
+              </a>
+              <a
+                href="tel:+84369088090"
+                className="block font-semibold text-green-700 underline"
+              >
+                +84 369088090
+              </a>
             </div>
-            <p className="text-base text-gray-700 leading-relaxed mb-4">
-              Tiêu đề: Tại sao &gt;50% thịt trên thị trường là nhập khẩu?
-            </p>
-            <p className="text-base text-gray-700 leading-relaxed mb-4">
-              Sub: Trong khi Việt Nam là quốc gia có truyền thống nông nghiệp –
-              chăn nuôi dồi dào, chất lượng luôn đứng top đầu thế giới.
-            </p>
-            <p className="text-base text-gray-700 leading-relaxed mb-4">
-              Giữa một đất nước trù phú như Việt Nam, thật khó tin khi hơn một nửa
-              lượng thịt người Việt đang ăn mỗi ngày lại đến từ những container lạnh
-              vượt hàng chục nghìn cây số. Thịt nhập khẩu rẻ hơn vì được sản xuất
-              hàng loạt với quy mô lớn.
-            </p>
-            <p className="text-base text-gray-700 leading-relaxed mb-6">
-              Thịt nội địa Việt Nam tuy an toàn và chất lượng tự nhiên, nhưng giá
-              thành vẫn cao hơn so với thịt nhập khẩu bởi phần lớn các hộ chăn nuôi
-              còn nhỏ lẻ, chưa có quy trình chăn nuôi – giết mổ – bảo quản đồng bộ.
-              Chính điều đó khiến thịt Việt dù tốt nhưng chưa đến được với số đông
-              người tiêu dùng. Mỗi chú bò được nuôi theo hướng hữu cơ 100% – ăn cỏ,
-              thân chuối, ngô, các loại đậu và lúa gạo – nên quá trình nuôi chậm hơn,
-              tốn công chăm sóc hơn, nhưng đổi lại là chất lượng thịt thơm ngọt,
-              thuần khiết và đáng tin cậy.
-            </p>
-            <p className="text-base text-gray-700 leading-relaxed">
-              -&gt; Chúng tôi sẽ đưa thịt nội địa 100% theo tiêu chuẩn cao hơn đến
-              với mỗi bàn ăn của người Việt.
-            </p>
-          </section>
-
-          {/* 3. Vietnam's Advantages */}
-          <section id="story-advantages" className="scroll-mt-24">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              Ưu điểm thổ nhưỡng, khí hậu Việt Nam để nuôi bò chất lượng cao
-            </h2>
-            <p className="text-lg font-semibold text-gray-800 mb-4">
-              Title: Biết thịt bạn và gia đình đang ăn đến từ đâu không còn là
-              &ldquo;biết thì tốt&rdquo;, mà phải là &ldquo;biết mới mua&rdquo;
-            </p>
-            <p className="text-base text-gray-700 leading-relaxed mb-6">
-              Hãy cùng chúng tôi &ldquo;quay lại với miền quê&rdquo;, nơi những chú bò được
-              chăm sóc, nuôi lớn trên vùng thổ nhưỡng trù phú của Ba Vì-Tam Đảo,
-              Tây Nguyên. Từ những nông trại 100% nội địa Việt Nam, cùng với quy
-              trình nuôi dưỡng, chăm sóc và bảo quản theo tiêu chuẩn Nhật Bản,
-              UmamiBox sẽ đem lại cho bạn thịt tươi hơn, sạch hơn và minh bạch từ
-              trang trại đến bàn ăn.
-            </p>
-            <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-md mb-6">
-              <Image
-                src="/images/image5.png"
-                alt="Vietnamese farm advantages"
-                fill
-                className="object-cover"
-              />
-            </div>
-          </section>
-
-          {/* 4. Our Solution */}
-          <section id="story-solution" className="scroll-mt-24">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              Giải pháp của chúng tôi
-            </h2>
-            <p className="text-lg font-semibold text-gray-800 mb-4">
-              Title: Thịt bò 100% nội địa Việt Nam theo tiêu chuẩn Nhật giao đến
-              tận nhà bạn hỉ với ~140k/bữa
-            </p>
-            <p className="text-base text-gray-700 leading-relaxed mb-6">
-              Chúng tôi đã dành vô số thời gian để tìm kiếm và hợp tác với những
-              nguồn cung cấp thịt bò tốt nhất được nuôi dưỡng tại Việt Nam 100%,
-              chăm sóc theo quy trình chuẩn Nhật Bản. Và chúng tôi tự hào nói rằng
-              giờ đây bạn đã có một loại thịt bò không có chất độc hại và tươi ngon
-              vô cùng!
-            </p>
-            <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-md mb-6">
-              <Image
-                src="/images/image7.png"
-                alt="Our solution"
-                fill
-                className="object-cover"
-              />
-            </div>
-          </section>
-
-          {/* 5. Aging and Preservation Process */}
-          <section id="story-preservation" className="scroll-mt-24">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              Quy trình &ldquo;Ủ&rdquo; và bảo quản
-            </h2>
-            <p className="text-base font-semibold text-gray-800 mb-4">
-              Title: Ở nhiệt độ trung bình ở các chợ Việt Nam, cứ mỗi 20 phút số
-              lượng vi khuẩn nguy hiểm sẽ tăng gấp đôi
-            </p>
-            <p className="text-base text-gray-700 leading-relaxed mb-4">
-              Sub: Sau 1 giờ, thịt bò đã bắt đầu mất an toàn vệ sinh. Bắt đầu phân
-              hủy nhẹ sau 3 giờ và hư rõ rệt sau từ 6–10 giờ. Trong khi đó, nếu được
-              bảo quản nghiêm ngặt ở 0–4°C, thời gian giữ tươi có thể kéo dài đến
-              3–5 ngày mà vẫn đảm bảo an toàn và dinh dưỡng.
-            </p>
-            <p className="text-base text-gray-700 leading-relaxed mb-4">
-              Đó là lý do vì sao các quốc gia như Mỹ và châu Âu từ lâu đã áp dụng
-              phương pháp{" "}
-              <span className="font-semibold">dry-aging hay wet-aging</span> – hay
-              còn gọi là <span className="italic">&ldquo;Ủ&rdquo; thịt bò</span> – trong môi
-              trường lạnh 0–2°C. Đây là quá trình cho phép enzyme tự nhiên làm mềm
-              thịt và tạo ra hương vị umami đậm đà. Kết hợp với công nghệ{" "}
-              <span className="font-semibold">flash freeze</span> –{" "}
-              <span className="italic">cấp lạnh siêu tốc ở –40°C</span> – họ có thể
-              &ldquo;khóa lại&rdquo; độ tươi ngon ở đỉnh cao nhất, mà không phá vỡ cấu trúc thịt
-              hay làm hao hụt dinh dưỡng.
-            </p>
-            <div
-              className="relative w-full rounded-lg overflow-hidden shadow-md mb-6"
-              style={{ aspectRatio: "568/380" }}
-            >
-              <Image
-                src="/images/image1.png"
-                alt="Aging process"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <p className="text-base text-gray-700 leading-relaxed mb-4">
-              Tại Việt Nam, những công nghệ này hiếm khi được áp dụng rộng rãi do
-              nguồn cung thịt bò còn manh mún, thiếu tính đồng bộ. Nhưng tại{" "}
-              <span className="font-semibold">UmamiBox</span>, chúng tôi không chờ
-              thị trường thay đổi – chúng tôi tự mình thay đổi.
-            </p>
-            <p className="text-base text-gray-700 leading-relaxed mb-4">
-              Chúng tôi ứng dụng trọn vẹn cả hai công nghệ tiên tiến –{" "}
-              <span className="italic">&ldquo;Ủ&rdquo; ướt + cấp lạnh siêu tốc</span> – vào từng
-              miếng thịt. Kết quả là sản phẩm đạt đến{" "}
-              <span className="font-semibold">108% hương vị</span>, với độ mềm, độ
-              ngọt và độ tươi mà bạn có thể cảm nhận ngay từ lần đầu nấu thử. Mỗi hộp
-              thịt giao đến tay bạn được bảo quản trong{" "}
-              <span className="font-semibold">&ldquo;chuỗi lạnh khép kín&rdquo;</span>, giám sát
-              bằng cảm biến và trí tuệ nhân tạo để đảm bảo không một phút nào vượt
-              ngoài ngưỡng an toàn.
-            </p>
-            <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-md mb-4">
-              <Image
-                src="/images/image6.png"
-                alt="Cold chain process"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <p className="text-base text-gray-700 leading-relaxed">
-              Chúng tôi không phải đơn vị tự nhận thịt bò mình nuôi ngon. Chúng tôi
-              hợp tác với các trang trại Việt Nam đạt chuẩn, dùng AI và mạng xã hội
-              để chính bạn cùng có thể xem quy trình, chất lượng của từng sản phẩm sẽ
-              mua.
-            </p>
-          </section>
-
-          {/* 6. What's in the Box */}
-          <section id="story-box-content" className="scroll-mt-24">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              Trong hộp có gì
-            </h2>
-            <div
-              className="relative w-full rounded-lg overflow-hidden shadow-md mb-6"
-              style={{ aspectRatio: "601.7/450.67" }}
-            >
-              <Image
-                src="/images/image4.png"
-                alt="Box contents"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <p className="text-base text-gray-700 leading-relaxed mb-6">
-              Mỗi hộp đều có tuyển chọn kỹ lưỡng các loại thịt bò ăn [có - ngư cực
-              cốc]. Ví dụ, một hộp có thể có thịt thăn lưng, sườn non, thịt bò xay và
-              thịt thăn lưng. Mỗi hộp có khoảng 15 - 20 phần thịt riêng lẻ, mỗi phần
-              từ 200g đến 300g.
-            </p>
-            <p className="text-lg font-semibold text-gray-800 mb-4">
-              Tiêu đề: Chúng tôi cung cấp cho bạn các công thức và cách cắt để nấu ăn
-              như một đầu bếp chuyên nghiệp
-            </p>
-            <p className="text-base text-gray-700 leading-relaxed mb-6">
-              Chúng tôi đã chọn những loại thịt phổ biến mà chúng tôi biết bạn sẽ
-              thích nấu, cũng như một số món ưa thích của chúng tôi. Bạn cũng sẽ
-              thích các thẻ công thức nấu ăn từng bước của chúng tôi, cung cấp mọi
-              thứ bạn cần để có một bữa ăn hoàn hảo.
-            </p>
-            <p className="text-lg font-semibold text-gray-800 mb-4">
-              Tiêu đề: Hãy nghĩ chúng tôi là chợ bán thịt trong xóm cho gia đình Việt
-              Nam hiện đại
-            </p>
-            <p className="text-base text-gray-700 leading-relaxed">
-              Mục tiêu của chúng tôi là giúp thịt bò nội địa 100% dễ tiếp cận hơn bao
-              giờ hết
-            </p>
-          </section>
-
-          {/* 7. Community Support */}
-          <section id="story-support" className="scroll-mt-24">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              Sự ủng hộ của bạn sẽ cho phép chúng tôi cung cấp nhiều loại thịt hơn
-              (thịt lợn, hải sản, thịt gà, …) và lan rộng phong trào &ldquo;thịt từ quê&rdquo;
-              trên khắp Việt Nam.
-            </h2>
-            <p className="text-base text-gray-700 mb-4">1 tháng</p>
-            <p className="text-base text-gray-700 mb-4">1 tháng - 2 hộp</p>
-            <p className="text-base text-gray-700 mb-4">3 tháng (ưu đãi)</p>
-            <p className="text-base text-gray-700 mb-4">6 tháng (ưu đãi)</p>
-            <p className="text-base text-gray-700 mb-4">1 năm (ưu đãi)</p>
-            <p className="text-base text-gray-700 mb-6">
-              1 năm + tiệc BBQ tại gia
-            </p>
-            <p className="text-lg font-semibold text-gray-800">
-              CHỌN PHẦN THƯỞNG CỦA BẠN Ở PHÍA BÊN PHẢI CỦA TRANG!
-            </p>
-          </section>
-
-          {/* 8. Stretch Goals */}
-          <section id="story-goals" className="scroll-mt-24">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              mục tiêu mở rộng
-            </h2>
-            <p className="text-base text-gray-700 mb-4">Gà & Heo</p>
-            <p className="text-base text-gray-700 mb-4 font-semibold">500 triệu</p>
-            <p className="text-base text-gray-700 leading-relaxed mb-6">
-              Tại cột mốc này, bạn có thể chọn nâng cấp hộp của bạn thành &ldquo;Mixed Box&rdquo;
-              với 100% bò, gà thả đồng cùng với 100% heo hữu cơ.
-            </p>
-            <p className="text-base text-gray-700 mb-4 font-semibold">1 tỷ</p>
-            <p className="text-base text-gray-700">Free ba chỉ xông khói</p>
-          </section>
-
-          {/* 9. Team Introduction */}
-          <section id="story-team" className="scroll-mt-24">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              Giới thiệu đội ngũ
-            </h2>
-            <p className="text-base text-gray-700 mb-4">
-              (1 ảnh) 1 Tên - vị trí - giới thiệu
-            </p>
-          </section>
-
-          {/* 10. Timeline */}
-          <section id="story-timeline" className="scroll-mt-24">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Timeline</h2>
-            <p className="text-base text-gray-700 mb-2">
-              Chiến dịch đặt bán trước bắt đầu 15/11/2025
-            </p>
-            <p className="text-base text-gray-700 mb-2">
-              Chiến dịch đặt bán trước kết thúc 15/12/2025
-            </p>
-            <p className="text-base text-gray-700">
-              Ước tính giao hàng tháng 1/2026
-            </p>
-          </section>
-
-          {/* 11-13. FAQ and Other Sections */}
-          <section id="story-faq" className="scroll-mt-24">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              Frequently Asked Questions
-            </h2>
-          </section>
-
-          <section id="story-other-questions" className="scroll-mt-24">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              Other Questions?
-            </h2>
-          </section>
-
-          <section id="story-challenges" className="scroll-mt-24">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              Thách thức.
-            </h2>
           </section>
         </div>
       </div>

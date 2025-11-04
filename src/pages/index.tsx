@@ -7,7 +7,6 @@ import {
   HeroSection,
   ProjectNav,
   RewardsSidebar,
-  RewardsSection,
   StorySection,
   StoryNavbar,
   FAQSection,
@@ -135,13 +134,13 @@ export default function Home() {
           </div>
         </div>
 
-        <section id="rewards">
+        {/* <section id="rewards">
           <RewardsSection
             title={t.raw("rewards.title")}
             subtitle={t.raw("rewards.subtitle")}
             rewards={t.raw("rewards.tiers")}
           />
-        </section>
+        </section> */}
 
         <Footer
           messages={t.raw("footer")}
